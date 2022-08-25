@@ -21,9 +21,21 @@
         });
 
         socket.emit('mensaje', {nombre:'Joan'} );
-        
-        socket.on('mensaje', function(payload){
-            console.log('Escuchando', payload );
+
+        // socket.on('mensaje', function(payload){
+        //     console.log('Escuchando', payload );
+        // });
+
+        // socket.on('emitir-mensaje', function(payload){
+        //     console.log('mensaje: ', payload );
+        // });
+
+
+
+        socket.on('active-bands', function (payload){
+            console.clear();
+            console.table(payload);
+            
         });
 
     </script>
